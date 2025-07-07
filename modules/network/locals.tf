@@ -1,0 +1,3 @@
+locals {
+  Owner = "Dev-Team"
+}
