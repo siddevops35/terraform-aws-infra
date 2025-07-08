@@ -30,9 +30,8 @@ module "dev_sg_1" {
 
 module "dev_compute_1" {
   source = "../modules/compute"
-  amis = {
-    "us-east-1" = "ami-020cba7c55df1f615"
-  }
+  amis = var.ami_id
+    # "ami-020cba7c55df1f615"
   region            = "us-east-1"
   key_name          = "aws_login"
   vpc_name          = module.dev_vpc_1.vpc_name

@@ -4,3 +4,6 @@
 #*.tfvars
 .terraform.lock.hcl
 crash.log
+build.log
+manifest.json
+ami_id.txt

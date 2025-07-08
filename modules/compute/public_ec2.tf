@@ -1,6 +1,6 @@
 resource "aws_instance" "public-server" {
   count = length(var.public_subnets_id)
-  ami = lookup(var.amis,var.region)
+  ami = var.amis
   instance_type = "t2.micro"
   key_name = var.key_name
   subnet_id = element(var.public_subnets_id, count.index)
